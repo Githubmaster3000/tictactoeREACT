@@ -10,9 +10,9 @@ function Game() {
   const [moves, setMoves] = useState(0);
 
   //Declaring a Winner
-  useEffect(() => {
-    setWinner(calculateWinner());
-  }, [squares, calculateWinner ]);
+  // useEffect(() => {
+  //   setWinner(calculateWinner());
+  // }, [squares, calculateWinner ]);
 
   //function to check if a player has won.
   //If a player has won, we can display text such as “Winner: X” or “Winner: O”.
@@ -57,6 +57,7 @@ function Game() {
     setSquares(tempSquares);
     setXIsNext(!xIsNext);
     setMoves(moves + 1);
+    setWinner(calculateWinner());
     // let h = [...history, i + 1];
     // setHistory(h);
   };
