@@ -8,7 +8,7 @@ function Game() {
   const [xIsNext, setXIsNext] = useState(true);
   const [winner, setWinner] = useState(null);
   const [moves, setMoves] = useState(0);
-  const calculateWinner = () => {
+  const calculateWinner = (squares) => {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -32,9 +32,9 @@ function Game() {
   };
 
   useEffect(() => {
-    const winner = calculateWinner();
+    const winner = calculateWinner(squares);
     setWinner(winner);
-  }, [squares, calculateWinner]);
+  }, [squares]);
 
   //function to check if a player has won.
   //If a player has won, we can display text such as “Winner: X” or “Winner: O”.
