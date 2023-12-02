@@ -33,7 +33,7 @@ function Game() {
 
   useEffect(() => {
     setWinner(calculateWinner());
-  }, [squares, calculateWinner]);
+  }, [squares]);
 
   //function to check if a player has won.
   //If a player has won, we can display text such as “Winner: X” or “Winner: O”.
