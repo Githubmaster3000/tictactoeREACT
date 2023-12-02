@@ -32,7 +32,8 @@ function Game() {
   };
 
   useEffect(() => {
-    setWinner(calculateWinner());
+    const winner = calculateWinner();
+    setWinner(winner);
   }, [squares, calculateWinner]);
 
   //function to check if a player has won.
